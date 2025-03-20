@@ -1,1 +1,6 @@
 # advprog-module6
+## REFLECTION
+- Commit 1 
+    - Pada commit pertama, program hanya membuat server TCP yang mendengarkan request HTTP. Pertama, program membuat server TCP pada "127.0.0.1:7878". Kemudian, server menerima koneksi baru yang dihandle dalam for loop yang melakukan call kepada function handle_connection. Function handle_connection akan mencetak raw HTTP Request yang dikirimkan oleh user pada web server. Functiona ini memiliki parameter mutable TcpStream. Dengan adanya mutable, isi dari variabel ini dapat dimodifikasi sesuai keperluan.Kemudian, TcpStream memberikan referensinya kepada BufReader. Pada method .lines() pada http_request dan buf_reader akan mengembalikan baris-baris masukan dari stream, lalu menggunakan map() untuk membongkar result dari lines(). Kemudian, function take_while mengumpulkan baris sampai menemukan baris kosong yang menandakan akhir dari HTTP Request. Collect() akan mengumpulkan baris-baris menjadi suatu Vector berisi String yang akan dicetak pada layer. 
+
+    
